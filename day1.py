@@ -1,9 +1,3 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
 def find_nums():
     input_array = [
                    "zlmlk1",
@@ -1006,17 +1000,6 @@ def find_nums():
                    "qkrsvjclp23",
                    "5fourzllbmcgkxsevengkrzkpvcmvgtxlrv6",
                    "fivetczxxvjrrqfive1sevennvj6one3"]
-
-    # input_array = [
-    #     "xfiveight"
-    #     "two1nine",
-    #     "eightwothree",
-    #     "abcone2threexyz",
-    #     "xtwone3four",
-    #     "4nineeightseven2",
-    #     "zoneight234",
-    #     "7pqrstsixteen"
-    # ]
     whole_sum = 0
     for input in input_array:
         input = translate_nums(input)
