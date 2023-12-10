@@ -14,7 +14,6 @@ def calculate_subvalues(values):
 
 def sequence():
     total_addition = 0
-    vals = []
     for line in fileinput.input("/Users/nathan.pringle/repos/advent-of-code/day9/input.txt"):
         values = line.replace("\n", "").split(" ")
         subvalues = []
@@ -34,11 +33,10 @@ def sequence():
             reversed_subvalues.reverse()
             subvalue = reversed_subvalues[i]
 
-            last_el = subvalue[len(subvalue) - 1]
-            reversed_subvalues[i + 1].append(last_el + reversed_subvalues[i + 1][-1])
-        addition += subvalues[0][-1] + int(values[-1])
+            last_el = subvalue[0]
+            reversed_subvalues[i + 1].insert(0, reversed_subvalues[i + 1][0] - last_el)
+        addition += int(values[0]) - subvalues[0][0]
 
-        vals.append(addition)
         total_addition += addition
 
     print(total_addition)
